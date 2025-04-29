@@ -26,17 +26,14 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>references\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx.Core">
-      <HintPath>references\BepInEx.Core.dll</HintPath>
+    <Reference Include="BepInEx">
+      <HintPath>references\BepInEx.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx.Unity.Common">
-      <HintPath>references\BepInEx.Unity.Common.dll</HintPath>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>references\BepInEx.Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx.Unity.Mono">
-      <HintPath>references\BepInEx.Unity.Mono.dll</HintPath>
-    </Reference>
-    <Reference Include="BepInEx.Unity.Mono.Preloader">
-      <HintPath>references\BepInEx.Unity.Mono.Preloader.dll</HintPath>
+    <Reference Include="BepInEx.Preloader">
+      <HintPath>references\BepInEx.Preloader.dll</HintPath>
     </Reference>
     <Reference Include="MonoMod.RuntimeDetour">
       <HintPath>references\MonoMod.RuntimeDetour.dll</HintPath>
