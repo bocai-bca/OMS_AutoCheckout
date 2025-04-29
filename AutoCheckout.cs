@@ -1,14 +1,13 @@
 ﻿using BepInEx;
 using HarmonyLib;
 using BepInEx.Logging;
-using BepInEx.Unity.Mono;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.CompilerServices;
 
-namespace OMS_AutoCheckout;
+namespace AutoCheckout;
 
-[BepInPlugin("oms_autocheckout", "AutoCheckout", "0.0.0")]
+[BepInPlugin("autocheckout", "AutoCheckout", "0.0.1")]
 public class AutoCheckout : BaseUnityPlugin
 {
 	internal static new ManualLogSource Logger;
@@ -16,11 +15,11 @@ public class AutoCheckout : BaseUnityPlugin
 	private void Awake()
 	{
 		Logger = base.Logger;
-		Logger.LogInfo($"Plugin oms_autocheckout is loaded!");
-		Harmony harmony = new("oms_autocheckout");
+		Logger.LogInfo($"Plugin AutoCheckout is loaded!");
+		Harmony harmony = new("AutoCheckout");
 		harmony.PatchAll();
 	}
-	[HarmonyPatch(typeof(UIManager), "OpenJournal")]
+	[HarmonyPatch(typeof(Checkout), "SpawnProducts")]
 	public static class Injector
 	{
 		public static void Postfix()
